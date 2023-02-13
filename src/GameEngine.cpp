@@ -30,7 +30,7 @@ void GameEngine::playRound()
 {
     displayRoundInfo();
 
-    auto pattern = codemaker->createPattern(board->getRowSize());
+    auto pattern = codemaker->createPattern(board->getPatternSize());
     auto guessChecker = GuessChecker(pattern);
 
     bool isPatternGuessed = false;
@@ -38,7 +38,7 @@ void GameEngine::playRound()
     while (not isPatternGuessed and numberOfTries < board->getNumberOfRows())
     {
         ++numberOfTries;
-        auto guess = codebreaker->makeGuess(board->getRowSize());
+        auto guess = codebreaker->makeGuess(board->getPatternSize());
         Result result;
         tie(result, isPatternGuessed) = guessChecker.check(guess);
         board->update(Row(guess, result));

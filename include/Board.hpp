@@ -13,13 +13,13 @@ public:
 
     void update(const Row&) override;
     void clear() override;
-    Size getRowSize() const override;
+    Size getPatternSize() const override;
     Size getNumberOfRows() const override;
 
 private:
     std::shared_ptr<IUserInterface> userInterface;
     Rows rows;
     Size numberOfRows;
-    Size rowSize;
+    Size patternSize;
 };
 }

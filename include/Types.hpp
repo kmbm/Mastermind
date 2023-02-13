@@ -35,10 +35,7 @@ using Guess = std::vector<CodePeg>;
 using Result = std::vector<KeyPeg>;
 
 struct Row
-{//refactor
-    Row(Guess p_guess) : guess(p_guess)
-    {}
-
+{
     Row(Guess p_guess, Result p_result) :
         guess(p_guess),
         result(p_result)

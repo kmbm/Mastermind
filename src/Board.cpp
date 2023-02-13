@@ -6,10 +6,10 @@ namespace mastermind
 Board::Board(
     const std::shared_ptr<IUserInterface>& p_userInterface,
     Size p_numberOfRows,
-    Size p_rowSize) noexcept :
+    Size p_patternSize) noexcept :
         userInterface(p_userInterface),
         numberOfRows(p_numberOfRows),
-        rowSize(p_rowSize)
+        patternSize(p_patternSize)
 {}
 
 void Board::update(const Row& p_newRow)
@@ -23,9 +23,9 @@ void Board::clear()
     rows.clear();
 }
 
-Size Board::getRowSize() const
+Size Board::getPatternSize() const
 {
-    return rowSize;
+    return patternSize;
 }
 
 Size Board::getNumberOfRows() const

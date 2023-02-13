@@ -6,9 +6,9 @@ namespace mastermind
 {
 Game::Game(const std::shared_ptr<IUserInterface>& p_userInterface,
            Size p_numberOfRows,
-           Size p_rowSize) noexcept :
+           Size p_patternSize) noexcept :
     userInterface(p_userInterface),
-    board(std::make_shared<Board>(p_userInterface, p_numberOfRows, p_rowSize))
+    board(std::make_shared<Board>(p_userInterface, p_numberOfRows, p_patternSize))
 {}
 
 void Game::start()
